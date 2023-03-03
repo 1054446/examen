@@ -1,0 +1,815 @@
+{
+	"info": {
+		"_postman_id": "374dffc9-441c-4155-9cb2-9cdbc0734355",
+		"name": "Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17478597"
+	},
+	"item": [
+		{
+			"name": "Estudiante",
+			"item": [
+				{
+					"name": "getEstudiante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estudiante/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveEstudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres\": \"jesus\",\r\n    \"apellidos\": \"dominguez\",\r\n    \"edad\": 26,\r\n    \"ciudad\": \"CDMX\",\r\n    \"zona\": {\r\n            \"zonaHorariaId\": 1,\r\n            \"zone\": \"America/Bogota\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estudiante/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEstudiante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"estudianteId\": 1,\r\n        \"nombres\": \"jesus\",\r\n        \"apellidos\": \"hernandez\",\r\n        \"edad\": 26,\r\n        \"ciudad\": \"CDMX\",\r\n        \"zona\": {\r\n            \"zonaHorariaId\": 1,\r\n            \"zone\": \"Europe/Berlin\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estudiante/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEstudiante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estudiante/v1/elimina/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"v1",
+								"elimina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZonaHoraria",
+			"item": [
+				{
+					"name": "getZona",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/zona-horaria/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zona-horaria",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveZona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zone\": \"America/Bogota\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/zona-horaria/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zona-horaria",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateZona",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"zonaHorariaId\": 1,\r\n            \"zone\": \"Europe/Berlin\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/zona-horaria/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zona-horaria",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteZona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/zona-horaria/v1/elimina/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zona-horaria",
+								"v1",
+								"elimina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Examenes",
+			"item": [
+				{
+					"name": "getExamen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveExamen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Programacion Orientada a Objetos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/examen/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateExamen",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"examenId\": 1,\r\n            \"nombre\": \"Programacion Orientada a Objetos\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/examen/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteExamen",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/v1/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"v1",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Preguntas",
+			"item": [
+				{
+					"name": "getPreguntas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pregunta/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pregunta",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "savePregunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pregunta\": \"Que es la POO?\",\r\n    \"examen\": {\r\n            \"examenId\": 1,\r\n            \"nombre\": \"Programacion Orientada a Objetos\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pregunta/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pregunta",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePregunta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pregunta/v1/elimina/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pregunta",
+								"v1",
+								"elimina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePregunta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"preguntasId\": 1,\r\n    \"pregunta\": \"Que es la POO?\",\r\n    \"examen\": {\r\n        \"examenId\": 1,\r\n        \"nombre\": \"Programacion Orientada a Objetos\"\r\n         }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pregunta/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pregunta",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Opciones",
+			"item": [
+				{
+					"name": "getOpcion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/opcion/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"opcion",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveOpcion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"opcion\": \"es un paradigma de programación, es decir, un modelo o un estilo de programación que nos da unas guías sobre cómo trabajar con él. Se basa en el concepto de clases y objetos\",\r\n    \"correct\": true,\r\n    \"pregunta\": {\r\n            \"preguntasId\": 2,\r\n            \"pregunta\": \"Que es la POO?\",\r\n            \"examen\": {\r\n                \"examenId\": 1,\r\n                \"nombre\": \"Programacion Orientada a Objetos\"\r\n            }\r\n        }        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/opcion/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"opcion",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOpcion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"opcionId\": 1,\r\n            \"opcion\": \"es un paradigma de programación, es decir, un modelo o un estilo de programación que nos da unas guías sobre cómo trabajar con él. Se basa en el concepto de clases y objetos\",\r\n            \"pregunta\": {\r\n                \"preguntasId\": 1,\r\n                \"pregunta\": \"Que es la POO?\",\r\n                \"examen\": {\r\n                    \"examenId\": 1,\r\n                    \"nombre\": \"Programacion Orientada a Objetos\",\r\n                    \"estudianteExamen\": []\r\n                }\r\n            },\r\n            \"correct\": false\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/opcion/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"opcion",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOpcion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/opcion/v1/elimina/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"opcion",
+								"v1",
+								"elimina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EstudianteExamen",
+			"item": [
+				{
+					"name": "getEstudianteExamen",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estudiante-examen/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante-examen",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postEstudianteExamen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"calificacion\": 100.0,\r\n    \"fechaExamen\": \"2023-02-01T19:03:05\",\r\n    \"examen\": {\r\n            \"examenId\": 1,\r\n            \"nombre\": \"programación\"\r\n        },\r\n    \"estudiante\": {\r\n            \"estudianteId\": 1,\r\n            \"nombres\": \"jesus\",\r\n            \"apellidos\": \"dominguez\",\r\n            \"edad\": 26,\r\n            \"ciudad\": \"CDMX\",\r\n            \"zona\": {\r\n                \"zonaHorariaId\": 1,\r\n                \"zone\": \"America/Bogota\"\r\n            }\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estudiante-examen/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante-examen",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEstudianteExamen",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"estudianteExamenId\": 1,\r\n            \"calificacion\": \"10\",\r\n            \"fechaExamen\": \"2023-02-01T00:00:00.000+00:00\",\r\n            \"examen\": {\r\n                \"examenId\": 1,\r\n                \"nombre\": \"Programacion Orientada a Objetos\"\r\n            },\r\n            \"estudiante\": {\r\n                \"estudianteId\": 1,\r\n                \"nombres\": \"jesus\",\r\n                \"apellidos\": \"dominguez\",\r\n                \"edad\": 26,\r\n                \"ciudad\": \"CDMX\",\r\n                \"zona\": {\r\n                    \"zonaHorariaId\": 1,\r\n                    \"zone\": \"Europe/Berlin\"\r\n                }\r\n            }\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estudiante-examen/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante-examen",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEstudianteExamen",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estudiante-examen/v1/elimina/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante-examen",
+								"v1",
+								"elimina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Respuestas",
+			"item": [
+				{
+					"name": "getRespuestas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/respuesta/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuesta",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveRespuesta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estudianteExamen\":{\r\n            \"estudianteExamenId\": 1,\r\n            \"calificacion\": \"10\",\r\n            \"fechaExamen\": \"2023-02-01T00:00:00.000+00:00\",\r\n            \"examen\": {\r\n                \"examenId\": 1,\r\n                \"nombre\": \"Programacion Orientada a Objetos\"\r\n            },\r\n            \"estudiante\": {\r\n                \"estudianteId\": 1,\r\n                \"nombres\": \"jesus\",\r\n                \"apellidos\": \"dominguez\",\r\n                \"edad\": 26,\r\n                \"ciudad\": \"CDMX\",\r\n                \"zona\": {\r\n                    \"zonaHorariaId\": 1,\r\n                    \"zone\": \"Europe/Berlin\"\r\n                }\r\n            }\r\n        },\r\n    \"pregunta\": {\r\n            \"preguntasId\": 2,\r\n            \"pregunta\": \"Que es la POO?\",\r\n            \"examen\": {\r\n                \"examenId\": 1,\r\n                \"nombre\": \"Programacion Orientada a Objetos\"\r\n            }\r\n        },\r\n    \"opcion\": {\r\n            \"opcionId\": 1,\r\n            \"opcion\": \"es un paradigma de programación, es decir, un modelo o un estilo de programación que nos da unas guías sobre cómo trabajar con él. Se basa en el concepto de clases y objetos\",\r\n            \"pregunta\": {\r\n                \"preguntasId\": 2,\r\n                \"pregunta\": \"Que es la POO?\",\r\n                \"examen\": {\r\n                    \"examenId\": 1,\r\n                    \"nombre\": \"Programacion Orientada a Objetos\"\r\n                }\r\n            },\r\n            \"correct\": true\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/respuesta/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuesta",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRespuesta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/respuesta/v1/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuesta",
+								"v1",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRespuesta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/respuesta/v1/elimina/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuesta",
+								"v1",
+								"elimina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRespuestaPorEstudiante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/respuesta/v1/consulta-estudiante-examen/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuesta",
+								"v1",
+								"consulta-estudiante-examen",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCalificacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/respuesta/v1/calificacion/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuesta",
+								"v1",
+								"calificacion",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
